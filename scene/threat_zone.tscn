@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvy7ffpwbnwpe"]
+
+[ext_resource type="Script" path="res://script/threat_zone.gd" id="1_ak0oj"]
+
+[node name="ThreatZone" type="Area2D"]
+script = ExtResource("1_ak0oj")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
