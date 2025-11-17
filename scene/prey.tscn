@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://duvprp8rp3rlt"]
 
 [ext_resource type="Texture2D" uid="uid://d0eg45ts0pyx" path="res://asset/sprite/knight.png" id="1_0slo7"]
-[ext_resource type="Script" path="res://script/prey.gd" id="1_j370d"]
+[ext_resource type="Script" uid="uid://cy6cjjodwapjg" path="res://script/prey.gd" id="1_j370d"]
 [ext_resource type="PackedScene" uid="uid://dvy7ffpwbnwpe" path="res://scene/threat_zone.tscn" id="3_c4p2j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1o6p0"]
@@ -109,7 +109,7 @@ size = Vector2(81, 49)
 
 [node name="Prey" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 13
+collision_mask = 5
 script = ExtResource("1_j370d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -131,3 +131,4 @@ position = Vector2(1.5, 2.5)
 shape = SubResource("RectangleShape2D_820ne")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="body_entered" from="ThreatZone" to="." method="_on_threat_zone_body_entered"]

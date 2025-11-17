@@ -43,4 +43,3 @@ func _physics_process(delta):
 		# flip sprite horizontally for left/right movement
 		if direction.x != 0:
 			animated_predator.flip_h = direction.x < 0
-

@@ -13,12 +13,12 @@ func _on_body_entered(body):
 			predators_in_range.append(body)  
 		
 		print("Predator is close")
-		animated_prey.fleeing = true
 
 
 		
 #action when predator is too far
 func _on_body_exited(body):
+	#pass
 	if body.is_in_group("predator"):  
-		print("Predator is close")
-		animated_prey.fleeing = false
+		print("Predator is farther away")
+		

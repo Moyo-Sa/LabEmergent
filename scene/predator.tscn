@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://duotmnl33slri"]
 
 [ext_resource type="Texture2D" uid="uid://nnpefdub5qc4" path="res://asset/sprite/Mask Dude/monster.png" id="1_07w64"]
-[ext_resource type="Script" path="res://script/predator.gd" id="1_ken7e"]
+[ext_resource type="Script" uid="uid://bry0bvppivuyi" path="res://script/predator.gd" id="1_ken7e"]
 [ext_resource type="Texture2D" uid="uid://chcjkvltkobph" path="res://asset/sprite/Mask Dude/Run (32x32).png" id="2_6o8o2"]
 [ext_resource type="PackedScene" uid="uid://dtfkxph2pcwrj" path="res://scene/kill_zone.tscn" id="4_f41vj"]
 
@@ -144,7 +144,7 @@ size = Vector2(19, 25)
 size = Vector2(22, 28)
 
 [node name="Predator" type="CharacterBody2D"]
-collision_mask = 6
+collision_mask = 14
 script = ExtResource("1_ken7e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
